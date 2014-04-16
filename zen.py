@@ -60,6 +60,7 @@ zd = ZenDesk('https://enter_your_zendesk_url_here/api/v2',
 # set the start time to the last log item, which is the "next_time" for the last pull that occurred
 # if this is the first time you're running this, set it to the first day your ZenDesk started in Unix epoch time,
 # and switch it back to zd.last_log_time() afterwards
+# you can also use the delta_start_time function defined above if you're interestd in tickets from a certain time ago
 start_time = zd.last_log_time()
 
 # alternatively you can specify a time manually, or a time a certain number of days and/or hours ago:
