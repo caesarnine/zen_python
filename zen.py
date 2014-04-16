@@ -96,6 +96,7 @@ tickets = zdresult['results']
 header = zdresult['field_headers']
 
 # create the objects that will let us write to the files
+# change the delimiter as needed; beware that the results do have free-text, so a comma may not work
 csvwriter = csv.DictWriter(zendump, delimiter='~', quoting=csv.QUOTE_ALL, fieldnames=header)
 if os.stat('zendump.csv').st_size <= 0:
     csvwriter.writeheader()
