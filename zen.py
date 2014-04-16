@@ -53,9 +53,9 @@ class ZenDesk:
 
 # Main Code to Download and Dump Incremental Tickets
 # ---------------------------------------------------------------------------------------------------------------------#
-zd = ZenDesk('https://#enter_your_zendesk_url_here#/api/v2',
-             '#enter_your_login_email_here#/token',
-             '#enter your API token here#')
+zd = ZenDesk('https://enter_your_zendesk_url_here/api/v2',
+             'enter_your_login_email_here/token',
+             'enter your API token here')
 
 # set the start time to the last log item, which is the "next_time" for the last pull that occurred
 start_time = zd.last_log_time()
