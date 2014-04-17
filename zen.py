@@ -83,6 +83,9 @@ try:
 except ValueError:
     print("Reached most current ticket.")
 
+# simple counter
+success = 1
+
 # create the files we'll be writing to'
 # change to 'a+' if new tickets need to be appended and not overwritten
 zendump = open('zendump.csv', 'w+')
