@@ -26,6 +26,14 @@ class ZenDesk:
         url = self.zendesk_url + zendesk_endpoint + str(start_time)
         response = requests.get(url, auth=(self.zendesk_username, self.zendesk_token), headers=headers)
         return response
+    
+    # function to access the Ticket Comments API and return the response
+    def ticket_comment_pull(self, ticket_id):
+        headers = {'Accept': 'application/json'}
+        zendesk_endpoint = '/tickets/' + str(ticket_id) + '/comments.json'
+        url = self.zendesk_url + zendesk_endpoint
+        response = requests.get(url, auth=(self.zendesk_username, self.zendesk_token), headers=headers)
+        return response
 
     # function to handle the responses ZenDesk sends
     def status_handler(self, response):
