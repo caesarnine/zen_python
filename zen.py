@@ -59,7 +59,7 @@ class ZenDesk:
 
 # ---------------------------------------------------------------------------------------------------------------------#
 
-# Main Code to Download and Dump Incremental Tickets
+# Example Code to Download and Dump Incremental Tickets (tickets updated sine the last time we pulled tickets)
 # ---------------------------------------------------------------------------------------------------------------------#
 zd = ZenDesk('https://enter_your_zendesk_url_here/api/v2',
              'enter_your_login_email_here/token',
