@@ -3,9 +3,19 @@ zen_python
 
 #### A library to access the ZenDesk API. Example code below to access the incremental API.
 
+Install the library.
+```
+sudo pip install Zen
+```
+
+Import the library.
+```python
+import zen
+```
+
 Initialize the object.
 ```python
-zd = ZenDesk('https://enter_your_zendesk_url_here/api/v2',
+zd = zen.ZenDesk('https://enter_your_zendesk_url_here/api/v2',
              'enter_your_login_email_here/token',
              'enter your API token here')
 ```
@@ -13,7 +23,7 @@ zd = ZenDesk('https://enter_your_zendesk_url_here/api/v2',
 Set the start time, the date in Unix epoch time we want to start pulling tickets from. In this example we'll assume we are pulling new tickets since the last update, so we're reading in the last time from the logfile.
 
 ```python
-start_time = zd.last_log_time()
+start_time = zd.last_log_time("log.txt")
 
 # alternatively you can specify a time manually, or a time a certain number of days and/or hours ago:
 # start_time = zd.delta_start_time(daysago = 1, hoursago=0)
